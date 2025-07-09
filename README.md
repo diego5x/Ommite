@@ -40,7 +40,7 @@ Deseja confirmar o commit [s/N]s
 [main 03b2e65] feat: Banner
  1 file changed, 33 insertions(+)
 diego@mkt:~/development/Ommite$
-
+````
 ---
 ## Instalação
 
