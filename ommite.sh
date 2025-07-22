@@ -14,11 +14,11 @@ select tipo in "feat" "fix" "docs" "style" "refactor" "test" "chore"; do
 	fi
 done
 
-read -p "Digite a menssage do escopo(opcional): " escopo
-read -p "Digite a menssage do commit: " msg
+read -p "Digite a mensagem do escopo(opcional): " escopo
+read -p "Digite a mensagem do commit: " msg
 
 if [[ -z "$msg" ]]; then
-	echo -e "${RED} A menssagem é obrigatória!${RESET}"
+	echo -e "${RED} A mensagem é obrigatória!${RESET}"
 	exit 1
 fi
 
