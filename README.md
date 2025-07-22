@@ -2,7 +2,7 @@
 
 **Ommite** é uma ferramenta de linha de comando simples e interativa para padronizar mensagens de commit no Git, seguindo o estilo dos [Conventional Commits](https://www.conventionalcommits.org/).
 ---
-<img src="telaDoOmmite.png" width="700px"/>
+<img src="telaDoOmmite.png" width="400px"/>
 
 ---
 ## Instalação
