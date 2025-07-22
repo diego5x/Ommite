@@ -6,6 +6,8 @@ CYAN='\033[0;36m'
 YELLOW='\033[1;33m'
 RESET='\033[0m'
 
+echo -e "${CYAN} Selecione o tipo de commit:${RESET}"
+
 select tipo in "feat" "fix" "docs" "style" "refactor" "test" "chore"; do
 	if [[ -n $tipo ]]; then
 		break
@@ -16,7 +18,7 @@ read -p "Digite a menssage do escopo(opcional): " escopo
 read -p "Digite a menssage do commit: " msg
 
 if [[ -z "$msg" ]]; then
-	echo "A menssagem é obrigatória!"
+	echo -e "${RED} A menssagem é obrigatória!${RESET}"
 	exit 1
 fi
 
@@ -26,12 +28,12 @@ else
 	commit_msg="$tipo: $msg"
 fi
 
-echo "$commit_msg"
-
+echo -e "${YELLOW}Commit formatado:${RESET} ${GREEN}$commit_msg${RESET}"
 read -p "Deseja confirmar o commit [s/N]" confirm
 
 if [[ $confirm =~ ^[Ss]$ ]]; then
+  echo -e "${GREEN} Realizando commit...${RESET}"
   git commit -m "$commit_msg"
 else
-  echo "Commit cancelado."
+  echo -e "${CYAN} Commit cancelado.${RESET}"
 fi
